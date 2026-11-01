@@ -1,0 +1,38 @@
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+    <url>
+        <loc>https://parchamdarangharn.github.io/file--1-/</loc>
+    </url>
+
+    <url>
+        <loc>https://parchamdarangharn.github.io/file--1-/exam/grades.html</loc>
+    </url>
+
+    <url>
+        <loc>https://parchamdarangharn.github.io/file--1-/exam/grades/grade1/grade1.html</loc>
+    </url>
+
+    <url>
+        <loc>https://parchamdarangharn.github.io/file--1-/exam/grades/grade2/grade2.html</loc>
+    </url>
+
+    <url>
+        <loc>https://parchamdarangharn.github.io/file--1-/exam/grades/grade3/grade3.html</loc>
+    </url>
+
+    <url>
+        <loc>https://parchamdarangharn.github.io/file--1-/exam/grades/grade4/grade4.html</loc>
+    </url>
+
+    <url>
+        <loc>https://parchamdarangharn.github.io/file--1-/exam/grades/grade5/grade5.html</loc>
+    </url>
+
+    <url>
+        <loc>https://parchamdarangharn.github.io/file--1-/exam/grades/grade6/grade6.html</loc>
+    </url>
+
+</urlset>
+```
