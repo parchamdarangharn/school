@@ -729,3 +729,104 @@ header .fa-times{
     background: var(--violet);
     letter-spacing: .1rem;
 }
+/* چیدمان سه‌تایی معلمان در تمام دستگاه‌ها */
+.teacher .card-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+    width: 100%;
+}
+
+.teacher .card {
+    width: 100%;
+    min-width: 0;
+    text-align: center;
+    overflow: hidden;
+}
+
+.teacher .card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+}
+
+/* تنظیم مخصوص موبایل */
+@media (max-width: 600px) {
+    .teacher .card-container {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 6px;
+    }
+
+    .teacher .card img {
+        height: 110px;
+    }
+
+    .teacher .card h3 {
+        font-size: 12px;
+    }
+
+    .teacher .card p {
+        font-size: 10px;
+    }
+
+    .teacher .card .icons a {
+        font-size: 10px;
+        margin: 2px;
+    }
+}
+/* ================= HOME TITLE ================= */
+
+/* جلوگیری از چند خطی شدن عنوان خوش‌آمدگویی */
+@media (max-width: 600px) {
+    .home .content h1 {
+        white-space: nowrap;
+        font-size: 15px;
+        text-align: center;
+    }
+
+    .home .content {
+        width: 100%;
+        padding: 0 5px;
+    }
+}
+
+/* ================= COURSES ================= */
+
+/* سه دوره در هر ردیف در تمام دستگاه‌ها */
+.course .box-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 15px;
+    width: 100%;
+}
+
+.course .box {
+    width: 100%;
+    min-width: 0;
+    text-align: center;
+}
+
+/* تنظیم دوره‌ها برای موبایل */
+@media (max-width: 600px) {
+    .course .box-container {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 7px;
+    }
+
+    .course .box {
+        padding: 10px 5px;
+    }
+
+    .course .box h3 {
+        font-size: 12px;
+    }
+
+    .course .box p {
+        font-size: 10px;
+    }
+
+    .course .box i {
+        font-size: 20px;
+    }
+}
