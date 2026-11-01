@@ -730,8 +730,9 @@ header .fa-times{
     letter-spacing: .1rem;
 }
 
+
 /* =====================================
-   FINAL RESPONSIVE FIX
+   RESPONSIVE FINAL VERSION
 ===================================== */
 
 html, body {
@@ -740,28 +741,29 @@ html, body {
     overflow-x: hidden;
 }
 
-img {
-    max-width: 100%;
+* {
+    box-sizing: border-box;
 }
 
-/* هدر و منوی موبایل */
+/* HEADER */
 @media (max-width: 768px) {
 
     header {
         width: 96%;
-        top: 1rem;
-        padding: 1rem 1.5rem;
-        border-radius: 2rem;
+        top: 8px;
+        padding: 10px 12px;
+        border-radius: 20px;
     }
 
     header .logo {
-        font-size: 1.6rem;
+        font-size: 14px;
         white-space: nowrap;
     }
 
     header .fa-bars {
         display: block;
-        font-size: 2.5rem;
+        font-size: 23px;
+        flex-shrink: 0;
     }
 
     header .navbar {
@@ -769,72 +771,135 @@ img {
         top: -100rem;
         left: 0;
         width: 100%;
-        background: #fff;
-        border-radius: 1rem;
+        background: white;
         opacity: 0;
-        transition: .2s linear;
-        z-index: 1001;
+        transition: .2s;
     }
 
     header .navbar.nav-toggle {
-        top: 6rem;
+        top: 65px;
         opacity: 1;
     }
 
     header .navbar ul {
         display: flex;
         flex-direction: column;
-        padding: 1rem;
+        padding: 10px;
     }
 
     header .navbar ul li {
         width: 100%;
-        margin: .5rem 0;
+        margin: 5px 0;
     }
 
     header .navbar ul li a {
-        font-size: 1.6rem;
+        font-size: 16px;
         text-align: center;
     }
 
-    /* عنوان خوش آمدگویی */
+    /* HOME */
     .home .content {
         width: 100%;
-        padding: 12rem 1rem 4rem;
+        padding: 130px 12px 40px;
     }
 
     .home .content h1 {
         width: 100%;
-        font-size: 2rem;
-        line-height: 1.8;
-        text-align: center;
+        font-size: 19px;
+        line-height: 1.9;
         white-space: normal;
+        text-align: center;
         overflow-wrap: break-word;
     }
 
     .home .content p {
         width: 100%;
-        padding: 1rem;
-        font-size: 1.5rem;
+        padding: 10px;
+        font-size: 14px;
         line-height: 2;
         text-align: center;
     }
 
-    /* کارت های صفحه اصلی */
-    .home .box-container {
-        padding: 1rem;
-        gap: 1rem;
+    /* TEACHERS */
+    .teacher .card-container {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 8px;
+        padding: 12px;
+        width: 100%;
     }
 
-    .home .box-container .box {
-        margin: .5rem;
-        max-width: 100%;
+    .teacher .card-container .card {
+        width: 100%;
+        min-width: 0;
+        margin: 0;
+        padding: 6px;
+        overflow: hidden;
     }
 
-    /* درباره ما */
+    .teacher .card-container .card img {
+        width: 100%;
+        height: 115px;
+        object-fit: cover;
+    }
+
+    .teacher .card-container .card h3 {
+        font-size: 12px;
+        overflow-wrap: anywhere;
+    }
+
+    .teacher .card-container .card p {
+        font-size: 10px;
+    }
+
+    .teacher .card-container .card .icons a {
+        font-size: 11px;
+        padding: 3px 1px;
+    }
+
+    /* COURSES */
+    .course .box-container {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        width: 100%;
+        padding: 35px 12px 15px;
+        gap: 12px;
+        margin: 0;
+    }
+
+    .course .box-container .box {
+        width: 100%;
+        min-width: 0;
+        height: auto;
+        min-height: 165px;
+        margin: 0;
+        padding: 8px 4px;
+        overflow: visible;
+    }
+
+    .course .box-container .box i {
+        width: 55px;
+        height: 55px;
+        line-height: 38px;
+        font-size: 22px;
+        margin-top: -28px;
+    }
+
+    .course .box-container .box h3 {
+        font-size: 12px;
+        line-height: 1.8;
+        overflow-wrap: anywhere;
+    }
+
+    .course .box-container .box p {
+        font-size: 10px;
+        line-height: 1.8;
+        padding: 5px 2px;
+    }
+
+    /* ABOUT */
     .about .row {
         flex-direction: column-reverse;
-        width: 100%;
     }
 
     .about .row .image img {
@@ -844,89 +909,12 @@ img {
 
     .about .row .content {
         width: 100%;
-        padding: 2rem;
+        padding: 20px;
     }
 
-    /* معلمان - سه ستون */
-    .teacher .card-container {
-        display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 8px;
-        padding: 1rem;
-        width: 100%;
-    }
-
-    .teacher .card-container .card {
-        width: 100%;
-        min-width: 0;
-        margin: 0;
-        padding: .7rem;
-        overflow: hidden;
-    }
-
-    .teacher .card-container .card img {
-        width: 100%;
-        height: 120px;
-        object-fit: cover;
-    }
-
-    .teacher .card-container .card h3 {
-        font-size: 1.3rem;
-        overflow-wrap: anywhere;
-    }
-
-    .teacher .card-container .card p {
-        font-size: 1.1rem;
-        overflow-wrap: anywhere;
-    }
-
-    .teacher .card-container .card .icons a {
-        font-size: 1.2rem;
-        padding: .5rem .2rem;
-    }
-
-    /* دوره ها - سه ستون */
-    .course .box-container {
-        display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        width: 100%;
-        padding: 3rem 1rem;
-        gap: 1rem;
-    }
-
-    .course .box-container .box {
-        width: 100%;
-        min-width: 0;
-        height: auto;
-        min-height: 16rem;
-        margin: 1rem 0;
-        padding: 1rem .3rem;
-        overflow-wrap: anywhere;
-    }
-
-    .course .box-container .box i {
-        width: 6rem;
-        height: 6rem;
-        line-height: 4rem;
-        font-size: 2rem;
-        margin-top: -3rem;
-    }
-
-    .course .box-container .box h3 {
-        font-size: 1.3rem;
-        line-height: 1.8;
-    }
-
-    .course .box-container .box p {
-        font-size: 1.1rem;
-        line-height: 1.8;
-        padding: .5rem;
-    }
-
-    /* تماس با ما */
+    /* CONTACT */
     .contact .row {
         flex-direction: column;
-        width: 100%;
     }
 
     .contact .row .image img {
@@ -939,52 +927,122 @@ img {
         padding: 0;
     }
 
-    /* نظرات */
+    /* COMMENTS */
     .comments {
-        padding: 3rem 1rem;
+        padding: 30px 12px;
     }
 
-    .comments-container {
-        width: 100%;
-    }
-
-    /* عنوان بخش ها */
+    /* TITLES */
     .heading {
-        font-size: 2.5rem;
+        font-size: 25px;
         line-height: 1.8;
     }
 
     .title {
-        font-size: 1.5rem;
+        font-size: 15px;
         line-height: 1.8;
     }
 }
 
-/* موبایل های خیلی کوچک */
+/* SMALL MOBILE */
 @media (max-width: 360px) {
 
     header .logo {
-        font-size: 1.3rem;
+        font-size: 12px;
     }
 
     .teacher .card-container {
         gap: 5px;
-        padding: .5rem;
+        padding: 8px;
     }
 
     .teacher .card-container .card img {
         height: 95px;
     }
 
-    .teacher .card-container .card h3 {
-        font-size: 1.1rem;
-    }
-
     .course .box-container {
-        gap: .5rem;
+        gap: 7px;
+        padding-left: 8px;
+        padding-right: 8px;
     }
 
     .course .box-container .box h3 {
+        font-size: 11px;
+    }
+}
+
+/* صفحه آزمون‌ها */
+.exam-page {
+    min-height: 100vh;
+    padding: 12rem 5% 5rem;
+    text-align: center;
+    background: #fdf7ff;
+}
+
+.exam-page .title {
+    margin: 2rem 0 3rem;
+}
+
+.grade-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 2rem;
+    max-width: 100rem;
+    margin: 0 auto;
+}
+
+.grade-box {
+    background: #fff;
+    border: 2px solid #e5b5e9;
+    border-radius: 1.5rem;
+    padding: 2.5rem 1rem;
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,.08);
+}
+
+.grade-box h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #63336d;
+}
+
+.exam-btn,
+.back-btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 1rem;
+    background: #9b59b6;
+    color: white;
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+.exam-btn:disabled {
+    opacity: .6;
+    cursor: not-allowed;
+}
+
+.back-btn {
+    margin-top: 3rem;
+    background: #704080;
+}
+
+@media (max-width: 600px) {
+    .grade-container {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: .8rem;
+    }
+
+    .grade-box {
+        padding: 1.5rem .5rem;
+    }
+
+    .grade-box h2 {
+        font-size: 1.3rem;
+    }
+
+    .exam-btn {
         font-size: 1.1rem;
+        padding: .8rem .5rem;
     }
 }
