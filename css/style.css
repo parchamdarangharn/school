@@ -1046,3 +1046,128 @@ html, body {
         padding: .8rem .5rem;
     }
 }
+header .navbar ul li a {
+    color: #333;
+}
+
+/* ============================= */
+/*       استایل صفحات آزمون      */
+/* ============================= */
+
+.exam-page {
+    min-height: 100vh;
+    padding: 12rem 5% 5rem;
+    text-align: center;
+    background: #fdf7ff;
+}
+
+.exam-page .title {
+    font-size: 3rem;
+    color: #63336d;
+    margin: 2rem 0 4rem;
+}
+
+/* چیدمان کارت‌ها */
+
+.grade-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 2rem;
+    max-width: 110rem;
+    margin: 0 auto;
+}
+
+/* کارت هر درس و آزمون */
+
+.grade-box {
+    background: #fff;
+    border: 2px solid #e5b5e9;
+    border-radius: 1.5rem;
+    padding: 2.5rem 1.5rem;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .08);
+    transition: .3s;
+}
+
+.grade-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 1rem 2rem rgba(99, 51, 109, .15);
+}
+
+.grade-box h2 {
+    font-size: 2rem;
+    color: #63336d;
+    margin-bottom: 2rem;
+}
+
+/* دکمه‌ها */
+
+.exam-btn,
+.back-btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 1rem;
+    background: #9b59b6;
+    color: white;
+    font-size: 1.5rem;
+    text-decoration: none;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.exam-btn:hover,
+.back-btn:hover {
+    background: #704080;
+}
+
+/* دکمه دانلود غیرفعال */
+
+.exam-btn:disabled {
+    opacity: .6;
+    cursor: not-allowed;
+}
+
+/* دکمه بازگشت */
+
+.back-btn {
+    margin-top: 3rem;
+    background: #704080;
+}
+
+/* نمایش در تبلت */
+
+@media (max-width: 900px) {
+    .grade-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* نمایش در موبایل */
+
+@media (max-width: 600px) {
+    .exam-page {
+        padding: 10rem 4% 3rem;
+    }
+
+    .exam-page .title {
+        font-size: 2.3rem;
+    }
+
+    .grade-container {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .grade-box {
+        padding: 2rem 1rem;
+    }
+
+    .grade-box h2 {
+        font-size: 1.8rem;
+    }
+
+    .exam-btn,
+    .back-btn {
+        font-size: 1.4rem;
+    }
+}
